@@ -1,0 +1,340 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== VARIABLES (PALETA 90s) ===== */
+:root {
+    --bg-main: linear-gradient(180deg, #1a1a40, #3a0ca3, #7209b7);
+    --bg-alt: linear-gradient(135deg, #ff006e, #ffbe0b);
+
+    --panel: #f5f5f5;
+    --panel-dark: #dcdcdc;
+
+    --text-main: #000;
+    --text-alt: #fff;
+
+    --accent1: #ff006e;
+    --accent2: #00f5d4;
+    --accent3: #ffbe0b;
+
+    --border-light: #ffffff;
+    --border-dark: #000000;
+
+    --font-main: "Verdana", "Trebuchet MS", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: var(--font-main);
+    background: var(--bg-main);
+    color: var(--text-alt);
+
+    /* textura tipo vieja web */
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            rgba(255,255,255,0.05) 0px,
+            rgba(255,255,255,0.05) 2px,
+            transparent 2px,
+            transparent 6px
+        );
+}
+body {
+    font-family: var(--font-main);
+    color: white;
+
+    background: linear-gradient(
+        180deg,
+        #000033 0%,
+        #000066 25%,
+        #1a0dab 50%,
+        #3a0ca3 75%,
+        #7209b7 100%
+    );
+}
+/* ===== LINKS ===== */
+a {
+    color: var(--accent2);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--accent1);
+    background: #000;
+}
+
+/* ===== HEADERS ===== */
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent3);
+
+    /* glow viejo */
+    text-shadow:
+        2px 2px 0 #000,
+        0 0 10px var(--accent3);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--accent2);
+    text-shadow: 2px 2px 0 #000;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--accent1);
+}
+
+/* ===== CONTENEDORES ===== */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== PANEL TIPO WINDOWS 98 ===== */
+.panel {
+    background: var(--panel);
+    color: var(--text-main);
+    padding: 15px;
+    margin: 15px 0;
+
+    border-top: 4px solid var(--border-light);
+    border-left: 4px solid var(--border-light);
+    border-right: 4px solid var(--border-dark);
+    border-bottom: 4px solid var(--border-dark);
+
+    /* sombra dura */
+    box-shadow: 6px 6px 0 #000;
+}
+
+/* ===== VARIANTE OSCURA ===== */
+.panel-dark {
+    background: var(--panel-dark);
+}
+
+/* ===== BOTONES RETRO ===== */
+.button {
+    display: inline-block;
+    padding: 8px 12px;
+    background: var(--panel);
+    color: #000;
+    text-decoration: none;
+
+    border-top: 3px solid var(--border-light);
+    border-left: 3px solid var(--border-light);
+    border-right: 3px solid var(--border-dark);
+    border-bottom: 3px solid var(--border-dark);
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--accent3);
+}
+
+.button:active {
+    border-top: 3px solid var(--border-dark);
+    border-left: 3px solid var(--border-dark);
+    border-right: 3px solid var(--border-light);
+    border-bottom: 3px solid var(--border-light);
+}
+
+/* ===== TABLAS VINTAGE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+}
+
+th {
+    background: var(--accent1);
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+td {
+    padding: 8px;
+    border: 2px solid black;
+}
+
+/* ===== LISTAS ===== */
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* ===== MARQUEE-STYLE (sin usar <marquee>) ===== */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    background: black;
+    color: var(--accent3);
+    padding: 5px;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ===== IMÁGENES ===== */
+img {
+    border: 3px solid black;
+    max-width: 100%;
+}
+
+/* ===== EFECTOS RANDOM (ESTILO CAÓTICO CONTROLADO) ===== */
+.random-box {
+    background: var(--bg-alt);
+    padding: 10px;
+    border: 3px dashed black;
+    transform: rotate(-2deg);
+}
+
+/* ===== HOVER DIVERTIDO ===== */
+.fun-hover:hover {
+    transform: scale(1.05) rotate(1deg);
+    transition: 0.2s;
+}
+
+/* ===== SCROLLBAR RETRO (webkit) ===== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent1);
+    border: 2px solid white;
+}
+/* ===== VENTANA WINDOWS 9X ===== */
+.window {
+    width: 300px;
+    background: #c0c0c0;
+    color: black;
+
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+
+    box-shadow: 4px 4px 0 black;
+}
+
+/* BARRA SUPERIOR */
+.window-header {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: white;
+
+    padding: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BOTONES (X, _, □) */
+.window-buttons {
+    display: flex;
+    gap: 3px;
+}
+
+.window-btn {
+    width: 16px;
+    height: 16px;
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+
+    font-size: 10px;
+    text-align: center;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+/* CONTENIDO */
+.window-content {
+    padding: 10px;
+    background: #c0c0c0;
+}
+.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+tr:nth-child(even) {
+    background: #e0e0e0;
+}
+.window-content p {
+    margin-bottom: 10px;
+}
+.window ul li {
+    margin-bottom: 6px;
+}
+/* ===== BARRAS ===== */
+.trait {
+    margin-bottom: 10px;
+}
+
+.bar {
+    width: 100%;
+    height: 15px;
+    background: #999;
+    border: 2px solid black;
+}
+
+.fill {
+    height: 100%;
+    background: lime;
+}
+
+/* ===== TOOLTIP ===== */
+.trait-box {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 5px;
+    top: 20px;
+    left: 0;
+    font-size: 12px;
+}
+
+.trait-box:hover .tooltip {
+    display: block;
+}
